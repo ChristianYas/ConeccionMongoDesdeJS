@@ -8,9 +8,9 @@ get().then(pets => console.log(pets))
 
 //INSERT PET
 let petInsert = {
-    nombre: "Max",
-    edad: 8,
-    raza: "chihuahua"
+    name: "Max",
+    breed: "Dalmata",
+    age: 1,
 }
 
 insert(petInsert)
@@ -19,11 +19,19 @@ insert(petInsert)
 //UPDATE PET
 let nameUpdatePet = {nombre: "Max"}
 
-let newPetUpdate = {$set: {nombre: "Husky"}}
+let newPetUpdate = {$set: {name: "Maxi"}}
 
 update(nameUpdatePet, newPetUpdate)
 
 //DELETE PET
-let nameDeleteDocument = {nombre: "Francisco"}
+
+let petInsertDelte = {
+
+    name: "Dogi",
+    breed: "Husky",
+    age: 2
+}
+
+let nameDeleteDocument = {nombre: "Dogi"}
 
 deleteOne(nameDeleteDocument)
